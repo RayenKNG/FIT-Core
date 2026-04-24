@@ -6,20 +6,23 @@ import '../../features/auth/presentation/pages/verify_email_page.dart';
 import '../../features/auth/presentation/providers/auth_provider.dart';
 import '../../features/dashboard/presentation/pages/dashboard_page.dart';
 import 'package:provider/provider.dart';
+import '../../features/dashboard/presentation/pages/dashboard_page.dart';
+import '../constants/app_colors.dart';
+import '../services/secure_storage.dart';
 
 class AppRouter {
-  static const String splash     = '/';
-  static const String login      = '/login';
-  static const String register   = '/register';
-  static const String verifyEmail= '/verify-email';
-  static const String dashboard  = '/dashboard';
+  static const String splash = '/';
+  static const String login = '/login';
+  static const String register = '/register';
+  static const String verifyEmail = '/verify-email';
+  static const String dashboard = '/dashboard';
 
   static Map<String, WidgetBuilder> get routes => {
-    splash:      (_) => const SplashPage(),
-    login:       (_) => const LoginPage(),
-    register:    (_) => const RegisterPage(),
+    splash: (_) => const SplashPage(),
+    login: (_) => const LoginPage(),
+    register: (_) => const RegisterPage(),
     verifyEmail: (_) => const VerifyEmailPage(),
-    dashboard:   (_) => const AuthGuard(child: DashboardPage()),
+    dashboard: (_) => const AuthGuard(child: DashboardPage()),
   };
 }
 
@@ -32,9 +35,9 @@ class AuthGuard extends StatelessWidget {
   Widget build(BuildContext context) {
     final status = context.watch<AuthProvider>().status;
     return switch (status) {
-      AuthStatus.authenticated     => child,
-      AuthStatus.emailNotVerified  => const VerifyEmailPage(),
-      _                            => const LoginPage(),
+      AuthStatus.authenticated => child,
+      AuthStatus.emailNotVerified => const VerifyEmailPage(),
+      _ => const LoginPage(),
     };
   }
 }
@@ -60,9 +63,7 @@ class _SplashPageState extends State<SplashPage> {
 
     // Cek token tersimpan
     final token = await SecureStorageService.getToken();
-    final route = token != null
-        ? AppRouter.dashboard
-        : AppRouter.login;
+    final route = token != null ? AppRouter.dashboard : AppRouter.login;
     Navigator.pushReplacementNamed(context, route);
   }
 
@@ -82,9 +83,9 @@ class _SplashPageState extends State<SplashPage> {
               child: const Text(
                 'FIT⚡CORE',
                 style: TextStyle(
-                  fontSize:   40,
+                  fontSize: 40,
                   fontWeight: FontWeight.w900,
-                  color:      Colors.white,
+                  color: Colors.white,
                   letterSpacing: -1,
                 ),
               ),
@@ -92,14 +93,12 @@ class _SplashPageState extends State<SplashPage> {
             const SizedBox(height: 8),
             const Text(
               'Train Like A Beast.',
-              style: TextStyle(
-                color:    AppColors.textMuted,
-                fontSize: 14,
-              ),
+              style: TextStyle(color: AppColors.textMuted, fontSize: 14),
             ),
             const SizedBox(height: 48),
             const SizedBox(
-              width: 24, height: 24,
+              width: 24,
+              height: 24,
               child: CircularProgressIndicator(
                 strokeWidth: 2,
                 color: AppColors.primary,
@@ -111,8 +110,3 @@ class _SplashPageState extends State<SplashPage> {
     );
   }
 }
-
-// Import yang dibutuhkan SplashPage
-import '../../features/dashboard/presentation/pages/dashboard_page.dart';
-import '../constants/app_colors.dart';
-import '../services/secure_storage.dart';
