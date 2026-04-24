@@ -7,6 +7,42 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:180598141198:android:4a6698fc5e0a5d3218e75f",
+        "android_client_info": {
+          "package_name": "com.example.fitcore_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "180598141198-7ss2m1rjl35pi7sl9ns15h9iaqsmqcub.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0AuL67maZeGuPqGG1wFSxPgdJzjWFB-Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "180598141198-7ss2m1rjl35pi7sl9ns15h9iaqsmqcub.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "180598141198-q25dvq0hh2ouvknu172h2f8ruh5q2a8o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.fitcoreApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:180598141198:android:abf8f543ada1ca4818e75f",
         "android_client_info": {
           "package_name": "fitcoreapp.com"
@@ -29,6 +65,13 @@
             {
               "client_id": "180598141198-7ss2m1rjl35pi7sl9ns15h9iaqsmqcub.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "180598141198-q25dvq0hh2ouvknu172h2f8ruh5q2a8o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.fitcoreApp"
+              }
             }
           ]
         }

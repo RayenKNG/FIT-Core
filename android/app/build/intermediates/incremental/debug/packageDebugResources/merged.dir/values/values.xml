@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">180598141198-7ss2m1rjl35pi7sl9ns15h9iaqsmqcub.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">180598141198</string>
+    <string name="google_api_key" translatable="false">AIzaSyA0AuL67maZeGuPqGG1wFSxPgdJzjWFB-Q</string>
+    <string name="google_app_id" translatable="false">1:180598141198:android:4a6698fc5e0a5d3218e75f</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA0AuL67maZeGuPqGG1wFSxPgdJzjWFB-Q</string>
+    <string name="google_storage_bucket" translatable="false">fitcore-dd584.firebasestorage.app</string>
+    <string name="project_id" translatable="false">fitcore-dd584</string>
+    <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        
+        <item name="android:windowBackground">@drawable/launch_background</item>
+    </style>
+    <style name="NormalTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">?android:colorBackground</item>
+    </style>
+</resources>

@@ -9,27 +9,32 @@ plugins {
 }
 
 android {
-    namespace "com.example.fitcore_app"
-    compileSdkVersion 34
+    // Ubah nama di sini sesuai Firebase lu
+    namespace = "com.example.fitcore_app"
+    
+    // Naikin SDK & NDK sesuai permintaan terminal
+    compileSdk = 36
+    ndkVersion = "28.2.13676358"
 
     defaultConfig {
-        applicationId "com.example.fitcore_app"
-        minSdkVersion 21
-        targetSdkVersion 34
-        versionCode 1
-        versionName "1.0.0"
-        multiDexEnabled true
-    }
+            // Ubah nama di sini juga
+            applicationId = "com.example.fitcore_app"
+            minSdk = flutter.minSdkVersion  // <--- UBAH JADI ANGKA INI AJA BIAR AMAN
+            targetSdk = 34
+            versionCode = 1
+            versionName = "1.0.0"
+            multiDexEnabled = true
+        }
 
     buildTypes {
         release {
-            signingConfig signingConfigs.debug
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
 }
 
 dependencies {
-    implementation 'com.google.firebase:firebase-bom:33.0.0'
+    implementation("com.google.firebase:firebase-bom:33.0.0")
 }
 
 flutter {
