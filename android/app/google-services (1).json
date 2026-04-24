@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "180598141198",
+    "project_id": "fitcore-dd584",
+    "storage_bucket": "fitcore-dd584.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180598141198:android:abf8f543ada1ca4818e75f",
+        "android_client_info": {
+          "package_name": "fitcoreapp.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "180598141198-7ss2m1rjl35pi7sl9ns15h9iaqsmqcub.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0AuL67maZeGuPqGG1wFSxPgdJzjWFB-Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "180598141198-7ss2m1rjl35pi7sl9ns15h9iaqsmqcub.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
